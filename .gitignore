@@ -13,3 +13,5 @@ Dart_Packages.xml
 .idea/
 *.aqueduct.pid
 pubspec.lock
+mysql_data/
+.dart_tool/

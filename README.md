@@ -1,20 +1,19 @@
-# pizza_delivery_api
+# Pizza Delivery API
 
-## Running the Application Locally
+This application is a backend application to act as an API for a Pizza Delivery application. The interaction will be made via HTTP requests and the database used is the MySQL Database.
 
-Run `aqueduct serve` from this directory to run the application. For running within an IDE, run `bin/main.dart`. By default, a configuration file named `config.yaml` will be used.
+In order to run the application, before the database must be created. It can be running either in a Docker Container (`docker-compose.yaml` file is available) or a local MySQL Server or even in a remote server or VPS.
 
-To generate a SwaggerUI client, run `aqueduct document client`.
+The database configuration script is also included in the repository (`database_script/db_script.sql`).
 
-## Running Application Tests
+## Running the Application
 
-To run all tests for this application, run the following in this directory:
+Before starting the application, be sure that you have Dart SDK and Aqueduct installed and configured. Then:
 
-```
-pub run test
-```
-
-The default configuration file used when testing is `config.src.yaml`. This file should be checked into version control. It also the template for configuration files used in deployment.
+- Clone the repository
+- Run `pub get` in the project's root directory
+- Run `aqueduct serve -a 0.0.0.0` (the **-a** flag is important if you want to access the server through the network)
+  - The standard port is the 8888. If you'd like to change it, just include the flag **-p** and pass the new port number
 
 ## Deploying an Application
 
